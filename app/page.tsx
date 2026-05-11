@@ -13,12 +13,14 @@ export default function Home() {
             <p className="mt-6 max-w-[320px] whitespace-pre-line text-[19px] font-display text-[#2c4754]">
               {"No more lost receipts,\nno more missing numbers."}
             </p>
-            <button
-              type="button"
-              className="btn-alive font-display mt-8 cursor-pointer rounded-full bg-gradient-to-r from-[#00CBC6] to-[#00D5BF] px-9 py-5 text-[clamp(20px,2.4vw,28px)] font-bold text-white shadow-[0_10px_28px_rgba(0,203,198,0.38),inset_0_1px_0_rgba(255,255,255,0.35)] transition-all hover:from-[#00D8D3] hover:to-[#00E2CC] hover:shadow-[0_14px_32px_rgba(0,203,198,0.45),inset_0_1px_0_rgba(255,255,255,0.4)]"
+            <a
+              href="https://forms.clickup.com/9008167462/f/8ceveh6-19038/4A7KI514BG030HAP22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-alive font-display mt-8 inline-flex cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#00CBC6] to-[#00D5BF] px-9 py-5 text-[clamp(20px,2.4vw,28px)] font-bold text-white shadow-[0_10px_28px_rgba(0,203,198,0.38),inset_0_1px_0_rgba(255,255,255,0.35)] transition-all hover:from-[#00D8D3] hover:to-[#00E2CC] hover:shadow-[0_14px_32px_rgba(0,203,198,0.45),inset_0_1px_0_rgba(255,255,255,0.4)]"
             >
               Join Waitlist
-            </button>
+            </a>
           </div>
           <div>
             <Image
@@ -26,8 +28,9 @@ export default function Home() {
               alt="Daily Minty"
               width={1374}
               height={773}
+              sizes="(min-width: 1440px) 835px, (min-width: 1024px) 60vw, 100vw"
               className="h-auto w-full"
-              quality={90}
+              quality={100}
               loading="eager"
               fetchPriority="high"
             />
@@ -44,6 +47,7 @@ export default function Home() {
                 alt="The Problem"
                 width={2526}
                 height={1548}
+                sizes="(min-width: 1440px) 696px, (min-width: 1024px) 50vw, 100vw"
                 className="h-auto w-full"
                 quality={100}
               />
@@ -56,7 +60,9 @@ export default function Home() {
               </div>
               <h2 className="mt-6 font-display text-3xl font-bold text-[#0f2d3a] sm:text-4xl">
                 Stuck in a <span className="text-[#d96a3a]">messy</span> and{" "}
-                <span className="text-[#d96a3a]">tiring</span> routine. Enjoy a
+                <br className="hidden lg:block" />
+                <span className="text-[#d96a3a]">tiring</span> routine. Enjoy a{" "}
+                <br className="hidden lg:block" />
                 simple and fresh day-end.
               </h2>
               <ul className="mt-8 space-y-4">
@@ -130,6 +136,7 @@ export default function Home() {
                     src={step.img}
                     alt={step.title}
                     fill
+                    sizes="(min-width: 1024px) 320px, 100vw"
                     className="object-contain"
                     quality={100}
                   />
@@ -165,7 +172,8 @@ export default function Home() {
               Keep me updated
             </h2>
             <a
-              href="https://www.minty.oliveandvinehk.com/"
+              href="https://forms.clickup.com/9008167462/f/8ceveh6-19038/4A7KI514BG030HAP22"
+              target="_blank"
               rel="noopener noreferrer"
               className="group mt-9 inline-flex items-center gap-3.5 rounded-full bg-gradient-to-r from-[#00CBC6] to-[#00D5BF] px-9 py-4 text-xl font-bold tracking-[-0.01em] text-white shadow-[0_12px_28px_rgba(0,203,198,0.42),inset_0_1px_0_rgba(255,255,255,0.4)] transition-all hover:from-[#00D8D3] hover:to-[#00E2CC] hover:shadow-[0_16px_36px_rgba(0,203,198,0.52),inset_0_1px_0_rgba(255,255,255,0.5)]"
             >
@@ -194,6 +202,7 @@ export default function Home() {
               alt="Minty mascot superhero with red cape"
               width={2372}
               height={1778}
+              sizes="(min-width: 1024px) 620px, 100vw"
               quality={100}
               className="block h-auto w-full"
             />
@@ -203,31 +212,11 @@ export default function Home() {
     </main>
 
     <footer className="border-t border-black/5 bg-[#fdf6ec] py-9">
-      <div className="mx-auto flex max-w-[1140px] flex-wrap items-center justify-between gap-6 px-7">
+      <div className="mx-auto flex max-w-[1140px] flex-wrap items-center justify-center px-7">
         <span className="text-[13px] text-[#6b8088]">
           © {new Date().getFullYear()} Olive &amp; Vine HK. All rights
           reserved.
         </span>
-        <div className="flex gap-[18px]">
-          <a
-            href="/privacy"
-            className="text-[13px] text-[#6b8088] transition-colors hover:text-[#0f2d3a]"
-          >
-            Privacy
-          </a>
-          <a
-            href="/terms"
-            className="text-[13px] text-[#6b8088] transition-colors hover:text-[#0f2d3a]"
-          >
-            Terms
-          </a>
-          <a
-            href="mailto:hello@dailyminty.com"
-            className="text-[13px] text-[#6b8088] transition-colors hover:text-[#0f2d3a]"
-          >
-            Contact
-          </a>
-        </div>
       </div>
     </footer>
     </>

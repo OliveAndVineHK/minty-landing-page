@@ -42,15 +42,16 @@ export default function RootLayout({
               alt="Minty"
               width={80}
               height={32}
+              sizes="80px"
               loading="eager"
               fetchPriority="high"
             />
-            <button
-              type="button"
-              className="font-display cursor-pointer rounded-full bg-[#0f2d3a] px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-[#0f2d3a]/80 focus:outline-none"
+            <a
+              href="https://www.minty.oliveandvinehk.com/"
+              className="font-display inline-flex cursor-pointer items-center justify-center rounded-full bg-[#0f2d3a] px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-[#0f2d3a]/80 focus:outline-none"
             >
-              Try Minty
-            </button>
+              Login
+            </a>
           </div>
         </header>
         {children}
