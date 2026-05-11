@@ -47,7 +47,7 @@ export default function RootLayout({
             />
             <button
               type="button"
-              className="font-display cursor-pointer rounded-full bg-[#242424] px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-[#242424]/80 focus:outline-none"
+              className="font-display cursor-pointer rounded-full bg-[#0f2d3a] px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-[#0f2d3a]/80 focus:outline-none"
             >
               Try Minty
             </button>

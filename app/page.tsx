@@ -2,17 +2,21 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+    <>
     <main className="flex-1 bg-white">
       <section className="mx-auto w-full max-w-[1440px] px-6 py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[2fr_3fr]">
           <div>
-            <h1 className="font-display text-5xl font-bold tracking-tight text-[#242424] sm:text-8xl">
+            <h1 className="font-display text-5xl font-extrabold tracking-[-0.035em] whitespace-nowrap text-[#0f2d3a] sm:text-[clamp(56px,6vw,80px)]">
               Daily Minty
             </h1>
-            <p className="mt-6 text-base font-display text-[#242424]/60 sm:text-lg">
-              No more lost receipts, no more missing numbers.
+            <p className="mt-6 max-w-[320px] whitespace-pre-line text-[19px] font-display text-[#2c4754]">
+              {"No more lost receipts,\nno more missing numbers."}
             </p>
-            <button type="button" className="font-display mt-8 cursor-pointer rounded-full bg-[#00CBC6] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-[#00CBC6]/40 transition-colors hover:bg-[#00CBC6]/80">
+            <button
+              type="button"
+              className="btn-alive font-display mt-8 cursor-pointer rounded-full bg-gradient-to-r from-[#00CBC6] to-[#00D5BF] px-9 py-5 text-[clamp(20px,2.4vw,28px)] font-bold text-white shadow-[0_10px_28px_rgba(0,203,198,0.38),inset_0_1px_0_rgba(255,255,255,0.35)] transition-all hover:from-[#00D8D3] hover:to-[#00E2CC] hover:shadow-[0_14px_32px_rgba(0,203,198,0.45),inset_0_1px_0_rgba(255,255,255,0.4)]"
+            >
               Join Waitlist
             </button>
           </div>
@@ -50,7 +54,7 @@ export default function Home() {
                   THE PROBLEM
                 </span>
               </div>
-              <h2 className="mt-6 font-display text-3xl font-bold text-[#242424] sm:text-4xl">
+              <h2 className="mt-6 font-display text-3xl font-bold text-[#0f2d3a] sm:text-4xl">
                 Stuck in a <span className="text-[#d96a3a]">messy</span> and{" "}
                 <span className="text-[#d96a3a]">tiring</span> routine. Enjoy a
                 simple and fresh day-end.
@@ -69,7 +73,7 @@ export default function Home() {
                     >
                       close
                     </span>
-                    <span className="font-display text-base text-[#242424]">
+                    <span className="font-display text-base text-[#0f2d3a]">
                       {item}
                     </span>
                   </li>
@@ -82,15 +86,15 @@ export default function Home() {
 
       <section className="bg-white">
         <div className="mx-auto w-full max-w-[1440px] px-6 py-24">
-          <h2 className="font-display text-center text-4xl font-bold text-[#242424] sm:text-5xl">
+          <h2 className="font-display text-center text-4xl font-bold text-[#0f2d3a] sm:text-5xl">
             Minty helps you close the day,{" "}
             <br />
             everyday.
           </h2>
-          <p className="mt-6 text-center text-base font-display text-[#242424]/60 sm:text-lg">
+          <p className="mt-6 text-center text-base font-display text-[#0f2d3a]/60 sm:text-lg">
             Three methods. One go-to dashboard. Zero spreadsheet trauma.
           </p>
-          <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-6 lg:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-[1140px] grid-cols-1 gap-6 lg:grid-cols-3">
             {[
               {
                 img: "/numbers.png",
@@ -119,9 +123,9 @@ export default function Home() {
             ].map((step, index) => (
               <div
                 key={step.title}
-                className="rounded-3xl border border-gray-200 p-8 text-center"
+                className="grid grid-rows-[auto_auto_auto_1fr] justify-items-center gap-3.5 rounded-[22px] border border-[#e7ddd0] bg-white px-6 py-7 text-center shadow-[0_1px_2px_rgba(15,45,58,0.04),0_2px_8px_rgba(15,45,58,0.04)]"
               >
-                <div className="relative aspect-square">
+                <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={step.img}
                     alt={step.title}
@@ -130,15 +134,15 @@ export default function Home() {
                     quality={100}
                   />
                 </div>
-                <div className="mx-auto mt-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#d6efe8]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#d6efe8]">
                   <span className="font-display text-base font-bold text-[#24a08f]">
                     {index + 1}
                   </span>
                 </div>
-                <h3 className="mt-4 font-display text-xl font-bold text-[#242424]">
+                <h3 className="font-display flex min-h-[2.4em] items-center text-[21px] font-bold text-[#0f2d3a]">
                   {step.title}
                 </h3>
-                <p className="mt-3 font-display text-sm text-[#242424]/60">
+                <p className="font-display min-h-[4em] text-[15.5px] leading-[1.5] text-[#6b8088]">
                   {step.description}
                 </p>
               </div>
@@ -146,6 +150,86 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section
+        id="waitlist"
+        className="relative overflow-hidden bg-cover bg-center pt-20 text-white"
+        style={{ backgroundImage: "url('/sky.png')" }}
+      >
+        <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 items-center gap-10 px-7 lg:min-h-[520px] lg:grid-cols-2">
+          <div className="mx-auto w-full max-w-[440px] rounded-[28px] border border-white/45 bg-white/20 px-7 py-14 text-center shadow-[0_24px_60px_rgba(15,45,58,0.16),inset_0_1px_0_rgba(255,255,255,0.6)] backdrop-blur-[18px] backdrop-saturate-[1.1] sm:px-14">
+            <h2 className="font-display text-[clamp(44px,5vw,68px)] font-extrabold leading-[1.02] tracking-[-0.025em] text-[#0f2d3a]">
+              <span className="mb-2.5 block font-sans text-[clamp(20px,1.8vw,26px)] font-medium tracking-normal text-[#0f2d3a]/70 italic">
+                Interested?
+              </span>
+              Keep me updated
+            </h2>
+            <a
+              href="https://www.minty.oliveandvinehk.com/"
+              rel="noopener noreferrer"
+              className="group mt-9 inline-flex items-center gap-3.5 rounded-full bg-gradient-to-r from-[#00CBC6] to-[#00D5BF] px-9 py-4 text-xl font-bold tracking-[-0.01em] text-white shadow-[0_12px_28px_rgba(0,203,198,0.42),inset_0_1px_0_rgba(255,255,255,0.4)] transition-all hover:from-[#00D8D3] hover:to-[#00E2CC] hover:shadow-[0_16px_36px_rgba(0,203,198,0.52),inset_0_1px_0_rgba(255,255,255,0.5)]"
+            >
+              Join the Waitlist
+              <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white/20 transition-all group-hover:translate-x-1 group-hover:bg-white/30">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div className="waitlist-float ml-auto flex w-full items-center justify-end lg:max-w-[620px]">
+            <Image
+              src="/super.png"
+              alt="Minty mascot superhero with red cape"
+              width={2372}
+              height={1778}
+              quality={100}
+              className="block h-auto w-full"
+            />
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer className="border-t border-black/5 bg-[#fdf6ec] py-9">
+      <div className="mx-auto flex max-w-[1140px] flex-wrap items-center justify-between gap-6 px-7">
+        <span className="text-[13px] text-[#6b8088]">
+          © {new Date().getFullYear()} Olive &amp; Vine HK. All rights
+          reserved.
+        </span>
+        <div className="flex gap-[18px]">
+          <a
+            href="/privacy"
+            className="text-[13px] text-[#6b8088] transition-colors hover:text-[#0f2d3a]"
+          >
+            Privacy
+          </a>
+          <a
+            href="/terms"
+            className="text-[13px] text-[#6b8088] transition-colors hover:text-[#0f2d3a]"
+          >
+            Terms
+          </a>
+          <a
+            href="mailto:hello@dailyminty.com"
+            className="text-[13px] text-[#6b8088] transition-colors hover:text-[#0f2d3a]"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </footer>
+    </>
   );
 }
