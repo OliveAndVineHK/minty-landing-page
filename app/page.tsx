@@ -61,9 +61,7 @@ export default function Home() {
               <h2 className="mt-6 font-display text-3xl font-bold text-[#0f2d3a] sm:text-4xl">
                 Stuck in a <span className="text-[#d96a3a]">messy</span> and{" "}
                 <br className="hidden lg:block" />
-                <span className="text-[#d96a3a]">tiring</span> routine. Enjoy a{" "}
-                <br className="hidden lg:block" />
-                simple and fresh day-end.
+                <span className="text-[#d96a3a]">tiring</span> routine.
               </h2>
               <ul className="mt-8 space-y-4">
                 {[
@@ -212,10 +210,9 @@ export default function Home() {
     </main>
 
     <footer className="border-t border-black/5 bg-[#fdf6ec] py-9">
-      <div className="mx-auto flex max-w-[1140px] flex-wrap items-center justify-center px-7">
+      <div className="mx-auto flex max-w-[1140px] flex-wrap items-center px-7">
         <span className="text-[13px] text-[#6b8088]">
-          © {new Date().getFullYear()} Olive &amp; Vine HK. All rights
-          reserved.
+          © {new Date().getFullYear()}{" "}Olive &amp; Vine HK. All rights reserved.
         </span>
       </div>
     </footer>

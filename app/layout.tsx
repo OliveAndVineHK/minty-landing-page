@@ -16,6 +16,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Minty",
   description: "Minty",
+  icons: {
+    icon: "/tab-logo.png",
+  },
 };
 
 export default function RootLayout({
