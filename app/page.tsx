@@ -1,3 +1,84 @@
+import Image from "next/image";
+
 export default function Home() {
-  return <main className="flex-1 bg-white" />;
+  return (
+    <main className="flex-1 bg-white">
+      <section className="mx-auto w-full max-w-[1440px] px-6 py-24">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[2fr_3fr]">
+          <div>
+            <h1 className="font-display text-5xl font-bold tracking-tight text-[#242424] sm:text-8xl">
+              Daily Minty
+            </h1>
+            <p className="mt-6 text-base font-display text-[#242424] sm:text-lg">
+              No more lost receipts, no more missing numbers.
+            </p>
+            <button type="button" className="font-display mt-8 cursor-pointer rounded-full bg-[#00CBC6] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-[#00CBC6]/40 transition-colors hover:bg-[#00CBC6]/80">
+              Join Waitlist
+            </button>
+          </div>
+          <div>
+            <Image
+              src="/daily.png"
+              alt="Daily Minty"
+              width={1374}
+              height={773}
+              className="h-auto w-full"
+              quality={90}
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#fbe7d2]">
+        <div className="mx-auto w-full max-w-[1440px] px-6 py-12">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+            <div>
+              <Image
+                src="/problem.png"
+                alt="The Problem"
+                width={2526}
+                height={1548}
+                className="h-auto w-full"
+                quality={100}
+              />
+            </div>
+            <div className="rounded-3xl bg-[#fff7ec] p-8 sm:p-10">
+              <div className="inline-block rounded-full bg-[#f4d4b3] px-4 py-1.5">
+                <span className="font-display text-xs font-bold tracking-wider text-[#d96a3a]">
+                  THE PROBLEM
+                </span>
+              </div>
+              <h2 className="mt-6 font-display text-3xl font-bold text-[#242424] sm:text-4xl">
+                Stuck in a <span className="text-[#d96a3a]">messy</span> and{" "}
+                <span className="text-[#d96a3a]">tiring</span> routine. Enjoy a
+                simple and fresh day-end.
+              </h2>
+              <ul className="mt-8 space-y-4">
+                {[
+                  "Rushed entries at closing",
+                  "Numbers don't match",
+                  "Extra time fixing mistakes",
+                  "Stress follows you home",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span
+                      className="material-symbols-outlined flex-none text-2xl text-[#d96a3a]"
+                      aria-hidden="true"
+                    >
+                      close
+                    </span>
+                    <span className="font-display text-base text-[#242424]">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
